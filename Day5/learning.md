@@ -10,13 +10,8 @@
         - Bitwise operators [&, |, ^, ~, <<, >>]
         - Ternary operators [x if condition else y]
         - Identity operators [is, is not]
-    2. Loops in python
-    3. range()
-    4. break
-    5. continue
-
 
 - Projects
-    1. Adding loops in Quiz app.
-    2. Tables Generator
-    3. Password Retry System
+    <!-- 1. Adding loops in Quiz app. -->
+    <!-- 2. Tables Generator -->
+    <!-- 3. Password Retry System -->
