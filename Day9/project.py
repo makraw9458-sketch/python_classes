@@ -1,64 +1,62 @@
 questions = [
-    [
-        "What is the capital of France?",
-        "A. London",
-        "B. Paris",
-        "C. Berlin",
-        "D. Madrid",
-        "B"
-    ],
-    [
-        "What is 2 + 2?",
-        "A. 3",
-        "B. 4",
-        "C. 5",
-        "D. 6",
-        "B"
-    ],
-    [
-        "What is the color of the sky?",
-        "A. Green",
-        "B. Red",
-        "C. Blue",
-        "D. Yellow",
-        "C"
-    ],
-    [
-        "Which planet is known as the Red Planet?",
-        "A. Venus",
-        "B. Jupiter",
-        "C. Mars",
-        "D. Saturn",
-        "C"
-    ],
-    [
-        "What is the largest ocean on Earth?",
-        "A. Atlantic",
-        "B. Indian",
-        "C. Arctic",
-        "D. Pacific",
-        "D"
-    ]
+    {
+        "question" : "What is the capital of France?",
+        "opt1" : "London",
+        "opt2" : "Paris",
+        "opt3" : "Berlin",
+        "opt4" : "Madrid",
+        "correct" : "B"
+    },
+    {
+        "question" : "What is 2 + 2?",
+        "opt1" : "3",
+        "opt2" : "4",
+        "opt3" : "5",
+        "opt4" : "6",
+        "correct" : "B"
+    },
+    {
+        "question" : "What is the color of the sky?",
+        "opt1" : "Green",
+        "opt2" : "Red",
+        "opt3" : "Blue",
+        # "opt4" : "Yellow",
+        "correct" : "C"
+    },
+    {
+        "question" : "Which planet is known as the Red Planet?",
+        "opt1" : "Venus",
+        "opt2" : "Jupiter",
+        "opt3" : "Mars",
+        "opt4" : "Saturn",
+        "correct" : "C"
+    },
+    {
+        "question" : "What is the largest ocean on Earth?",
+        "opt1" : "Atlantic",
+        "opt2" : "Indian",
+        "opt3" : "Arctic",
+        "opt4" : "Pacific",
+        "correct" : "D"
+    }
 ]
 
 userSelection = ""
 score = 0
 
 for question in questions:
-    print(question[0])
+    print(question['question'])
     print("\nOptions: \n")
-    print(question[1])
-    print(question[2])
-    print(question[3])
-    print(question[4])
+    print("A. ",question.get('opt1', 'option not exist'))
+    print("B. ",question.get('opt2', 'option not exist'))
+    print("C. ",question.get('opt3', 'option not exist'))
+    print("D. ",question.get('opt4', 'option not exist'))
     userSelection = input("Enter your option: ")
     print("\n\n")
     # logic to check correct opt.
     u_us = userSelection.upper()
     
-    print(u_us)
-    
-    if u_us == question[5]:
+    if u_us == question['correct']:
         score += 1
 
 print("Your score is: ", score)
